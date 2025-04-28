@@ -1,0 +1,157 @@
+{
+  "usuarios.json": [
+    {"id": "cli001", "nombre": "María González", "tipo": "Cliente"},
+    {"id": "cli002", "nombre": "Carlos Méndez", "tipo": "Cliente"},
+    {"id": "trab001", "nombre": "Ana Torres", "tipo": "Trabajador"},
+    {"id": "trab002", "nombre": "Luis Pérez", "tipo": "Trabajador"},
+    {"id": "trab003", "nombre": "Marta Riquelme", "tipo": "Trabajador"}
+  ],
+
+  "clientes.json": [
+    {
+      "id": "cli001",
+      "nombre": "María González",
+      "edad": 28,
+      "alergias": "Lactosa"
+    },
+    {
+      "id": "cli002",
+      "nombre": "Carlos Méndez",
+      "edad": 35,
+      "alergias": "Nueces"
+    }
+  ],
+
+  "trabajadores.json": [
+    {
+      "id": "trab001",
+      "nombre": "Ana Torres",
+      "especialidad": "servicio al cliente"
+    },
+    {
+      "id": "trab002",
+      "nombre": "Luis Pérez",
+      "especialidad": "cocina"
+    },
+    {
+      "id": "trab003",
+      "nombre": "Marta Riquelme",
+      "especialidad": "administrativo"
+    }
+  ],
+
+  "productos.json": [
+    {
+      "id": "prod001",
+      "nombre": "Pastel de chocolate",
+      "precio": 4500,
+      "descripcion": "Pastel de chocolate con relleno de crema",
+      "categoria": "Pastel"
+    },
+    {
+      "id": "prod002",
+      "nombre": "Pastel de fresas",
+      "precio": 4800,
+      "descripcion": "Pastel de vainilla con fresas naturales",
+      "categoria": "Pastel"
+    },
+    {
+      "id": "prod003",
+      "nombre": "Galletas",
+      "precio": 1500,
+      "descripcion": "Paquete de 6 galletas caseras",
+      "categoria": "Galleta"
+    },
+    {
+      "id": "prod004",
+      "nombre": "Dona de chocolate",
+      "precio": 1200,
+      "descripcion": "Dona glaseada con chocolate",
+      "categoria": "Dona"
+    }
+  ],
+
+  "bebidas.json": [
+    {
+      "id": "beb001",
+      "nombre": "Café Americano",
+      "precio": 1800,
+      "descripcion": "Café negro americano",
+      "temperatura": "caliente"
+    },
+    {
+      "id": "beb002",
+      "nombre": "Café latte",
+      "precio": 2200,
+      "descripcion": "Café con leche vaporizada",
+      "temperatura": "caliente"
+    },
+    {
+      "id": "beb003",
+      "nombre": "Té verde",
+      "precio": 1500,
+      "descripcion": "Té verde japonés",
+      "temperatura": "caliente"
+    },
+    {
+      "id": "beb004",
+      "nombre": "Jugo de naranja",
+      "precio": 2000,
+      "descripcion": "Jugo natural recién exprimido",
+      "temperatura": "fría"
+    }
+  ],
+
+  "pedidos.json": [
+    {
+      "id": "1",
+      "id_cliente": "cli001",
+      "productos": ["prod001", "prod003"],
+      "bebidas": ["beb002"],
+      "fecha": "2023-05-15 14:30:22",
+      "estado": "completado",
+      "total": 7500,
+      "personalizaciones": ["pers001"]
+    },
+    {
+      "id": "2",
+      "id_cliente": "cli002",
+      "productos": ["prod002"],
+      "bebidas": ["beb001", "beb004"],
+      "fecha": "2023-05-16 18:45:10",
+      "estado": "en preparación",
+      "total": 8300,
+      "personalizaciones": ["pers002", "pers003"]
+    }
+  ],
+
+  "personalizaciones.json": [
+    {
+      "id": "pers001",
+      "id_pedido": "1",
+      "tipo": "producto",
+      "base": "Pastel de chocolate",
+      "extras": ["Crema batida"],
+      "notas": "Sin lactosa por favor"
+    },
+    {
+      "id": "pers002",
+      "id_pedido": "2",
+      "tipo": "producto",
+      "base": "Pastel de fresas",
+      "extras": [],
+      "notas": "Cortar en 4 porciones"
+    },
+    {
+      "id": "pers003",
+      "id_pedido": "2",
+      "tipo": "bebida",
+      "base": "Café Americano",
+      "extras": {
+        "modificadores": ["Leche", "Azúcar"],
+        "intensidad": 3
+      },
+      "notas": "Poco azúcar por favor"
+    }
+  ]
+}
